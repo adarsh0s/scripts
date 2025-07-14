@@ -3,10 +3,13 @@
 rm -rf .repo/local_manifests
 
 # Initialize repo with Lineage manifest
-repo init -u https://github.com/lineageos/manifest -b lineage-22.2 --git-lfs --depth=1
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
 
 # Clone local manifests
 git clone https://github.com/adarsh0s/local_manifest .repo/local_manifests
+
+# Sync Repo 
+repo sync
 
 # Run resync script
 /opt/crave/resync.sh
