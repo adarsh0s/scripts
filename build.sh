@@ -19,6 +19,8 @@ source build/envsetup.sh
 export RELAX_USES_LIBRARY_CHECK=true
 lunch lineage_devonf-bp1a-userdebug
 
+rm -rf device/google/cuttlefish_vmm
+
 # Start the build
 mka target-files-package otatools
 wget https://raw.githubusercontent.com/adarsh0s/scripts/refs/heads/main/create_keys.sh
